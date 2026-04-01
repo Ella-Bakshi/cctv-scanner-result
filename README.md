@@ -2,7 +2,7 @@
 
 Interactive map visualizing internet-facing Chinese-manufactured surveillance cameras detected across India's public IPv4 address space.
 
-**Live:** See the hosted gitpage
+**Live:** [Github.io link](https://ella-bakshi.github.io/cctv-scanner-result/)
 
 ## Overview
 
