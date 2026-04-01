@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://d3js.org https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
+<title>Chinese CCTV Exposure in India</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="topbar">
+    <span class="topbar-title">Chinese CCTV Exposure in India</span>
+    <div class="topbar-right">
+      <button class="theme-toggle" id="theme-toggle" title="Toggle dark mode">
+        <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <span class="topbar-date">Scanned 1 April 2026</span>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-number" id="s-total">—</div>
+    <p class="hero-desc">Chinese-manufactured surveillance cameras found directly accessible on India's public internet, across <strong id="s-states">—</strong> States and Union Territories.</p>
+  </section>
+
+  <div class="content">
+    <section class="map-card">
+      <div id="map"></div>
+      <div class="map-footer">
+        <div class="legend-row">
+          <span class="legend-label">Camera density</span>
+          <span class="legend-lo">Low</span>
+          <div class="legend-grad"></div>
+          <span class="legend-hi">High</span>
+        </div>
+        <div class="dot-legend">
+          <span class="dot-item"><i style="background:#2b6cb0"></i>Hikvision</span>
+          <span class="dot-item"><i style="background:#c53030"></i>Dahua</span>
+          <span class="dot-item"><i style="background:#6b46c1"></i>XMEye</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>By State &amp; Union Territory</h3>
+        <div id="state-bars"></div>
+      </div>
+      <div class="panel">
+        <h3>By City</h3>
+        <div id="city-bars"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <h3>Why does this exist?</h3>
+      <p>On <strong>1 April 2026</strong>, India's ban on non-certified CCTV cameras came into full effect. This is the result of three government directives:</p>
+      <div class="ref-grid">
+        <div class="ref">
+          <div class="ref-tag"><a href="https://www.mha.gov.in/sites/default/files/CCTV_30042024.pdf" target="_blank" rel="noopener">Gazette Notification</a></div>
+          <div class="ref-date">7 March &amp; 9 April 2024</div>
+          <p>Amended the <a href="https://www.mha.gov.in/sites/default/files/CCTV_30042024.pdf" target="_blank" rel="noopener">Public Procurement Order</a> for CCTVs (7 March) and added CCTV cameras to the <a href="https://www.stqc.gov.in/en/iot-system-certification-scheme-iotscs-0" target="_blank" rel="noopener">Compulsory Registration Order (CRO), 2021</a> (9 April), defining Essential Requirements for security including mandatory SoC origin disclosure.</p>
+        </div>
+        <div class="ref">
+          <div class="ref-tag"><a href="https://www.csir.res.in/sites/default/files/2026-02/ppp_certificatew_waiver-04.02.2025-dsc.pdf" target="_blank" rel="noopener">MeitY Office Memorandum</a></div>
+          <div class="ref-date">4 February 2026</div>
+          <p>Withdrew all transition relaxations (<a href="https://www.csir.res.in/sites/default/files/2026-02/ppp_certificatew_waiver-04.02.2025-dsc.pdf" target="_blank" rel="noopener">No. W-18/26/2025-IPHW</a>), setting <strong>1 April 2026</strong> as the final deadline. No internet-connected CCTV camera can be sold in India without <a href="https://www.stqc.gov.in/en/iot-system-certification-scheme-iotscs-0" target="_blank" rel="noopener">STQC certification</a>.</p>
+        </div>
+        <div class="ref">
+          <div class="ref-tag"><a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2245073&reg=3&lang=1" target="_blank" rel="noopener">PIB Press Release</a></div>
+          <div class="ref-date">25 March 2026</div>
+          <p>Confirmed that all CCTV devices must undergo testing at <a href="https://stqc.gov.in/en/stqc-empanelled-test-laboratories" target="_blank" rel="noopener">accredited laboratories</a> and <strong>disclose the origin of critical components</strong> like the SoC.</p>
+        </div>
+      </div>
+      <p class="footer-note">Under the new framework, all CCTV devices must meet the Essential Requirements for security, including disclosure of SoC origin and testing at STQC-accredited laboratories. Devices that do not meet these certification requirements cannot be legally sold or installed in India from this date. This map documents how many non-certified, internet-facing surveillance devices remain accessible as of the enforcement deadline.</p>
+      <p class="footer-note">The directive applies to new sales and installations. Existing cameras already deployed are not subject to seizure, though they may not receive future firmware or security updates from their manufacturers.</p>
+    </div>
+  </footer>
+
+</div>
+
+<div id="tooltip"></div>
+<div class="modal-bg" id="modal"><div class="modal" id="modal-card"></div></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="js/geodata.js"></script>
+<script src="js/data.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>
